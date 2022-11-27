@@ -15,6 +15,7 @@ class PostTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       minVerticalPadding: 10,
+      leading: const Icon(Icons.newspaper, size: 30),
       title: Text(
         post.title,
         overflow: TextOverflow.ellipsis,

@@ -14,6 +14,10 @@ class UserTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      leading: const CircleAvatar(
+        backgroundColor: Colors.blueGrey,
+        child: Icon(Icons.person),
+      ),
       title: Text(user.name),
       subtitle: Row(
         children: [

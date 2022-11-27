@@ -14,6 +14,7 @@ class AlbumTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      leading: const Icon(Icons.collections),
       title: Text(album.title),
       onTap: () {
         Navigator.of(context).push(
