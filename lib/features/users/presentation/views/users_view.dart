@@ -11,11 +11,13 @@ class UsersView extends StatefulWidget {
   State<UsersView> createState() => _UsersViewState();
 }
 
-class _UsersViewState extends State<UsersView> {
+class _UsersViewState extends State<UsersView>
+    with AutomaticKeepAliveClientMixin<UsersView> {
   final Future<List<User>> _usersFuture = UserRepository().getAllUsers();
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return FutureBuilder<List<User>>(
       future: _usersFuture,
       builder: (context, snapshot) {
@@ -44,4 +46,7 @@ class _UsersViewState extends State<UsersView> {
       },
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

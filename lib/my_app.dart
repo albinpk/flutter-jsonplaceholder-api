@@ -39,6 +39,15 @@ class _HomeScreenState extends State<_HomeScreen> {
   /// Selected index.
   int _currentIndex = 0;
 
+  /// PageController for navigation items PageView.
+  final _pageController = PageController();
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     final isLargeScreen = MediaQuery.of(context).size.width > 700;
@@ -63,7 +72,15 @@ class _HomeScreenState extends State<_HomeScreen> {
                   )
                   .toList(),
             ),
-          Expanded(child: _navItems.elementAt(_currentIndex).view),
+          Expanded(
+            // Using PageView to avoid creating all widgets at the start.
+            // And preserving state on each page by using the AutomaticKeepAliveClientMixin.
+            child: PageView(
+              controller: _pageController,
+              physics: const NeverScrollableScrollPhysics(),
+              children: _navItems.map((e) => e.view).toList(),
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: isLargeScreen
@@ -81,7 +98,12 @@ class _HomeScreenState extends State<_HomeScreen> {
     );
   }
 
-  void _onNavIndexChange(int i) => setState(() => _currentIndex = i);
+  void _onNavIndexChange(int i) {
+    setState(() {
+      _currentIndex = i;
+      _pageController.jumpToPage(i);
+    });
+  }
 }
 
 class _Nav {

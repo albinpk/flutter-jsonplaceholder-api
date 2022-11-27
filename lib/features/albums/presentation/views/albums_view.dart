@@ -11,11 +11,13 @@ class AlbumsView extends StatefulWidget {
   State<AlbumsView> createState() => _AlbumsViewState();
 }
 
-class _AlbumsViewState extends State<AlbumsView> {
+class _AlbumsViewState extends State<AlbumsView>
+    with AutomaticKeepAliveClientMixin<AlbumsView> {
   final _albumsFuture = AlbumRepository().getAllAlbums();
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return FutureBuilder<List<Album>>(
       future: _albumsFuture,
       builder: (context, snapshot) {
@@ -44,4 +46,7 @@ class _AlbumsViewState extends State<AlbumsView> {
       },
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

@@ -11,11 +11,13 @@ class PostsView extends StatefulWidget {
   State<PostsView> createState() => _PostsViewState();
 }
 
-class _PostsViewState extends State<PostsView> {
+class _PostsViewState extends State<PostsView>
+    with AutomaticKeepAliveClientMixin<PostsView> {
   final Future<List<Post>> _postsFuture = PostRepository().getAllPosts();
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return FutureBuilder<List<Post>>(
       future: _postsFuture,
       builder: (context, snapshot) {
@@ -44,4 +46,7 @@ class _PostsViewState extends State<PostsView> {
       },
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
