@@ -2,7 +2,7 @@
     package="com.example.jsonplaceholder_example">
    <uses-permission android:name="android.permission.INTERNET" /> 
    <application
-        android:label="jsonplaceholder_example"
+        android:label="Jsonplaceholder Example"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
