@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="icon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.71685827"
+     inkscape:cx="259.46552"
+     inkscape:cy="279.69267"
+     inkscape:window-width="1366"
+     inkscape:window-height="740"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1409">
+      <stop
+         style="stop-color:#00428a;stop-opacity:1;"
+         offset="0"
+         id="stop1405" />
+      <stop
+         style="stop-color:#000069;stop-opacity:1;"
+         offset="1"
+         id="stop1407" />
+    </linearGradient>
+    <color-profile
+       name="sRGB"
+       xlink:href="file:///usr/share/color/icc/colord/sRGB.icc"
+       id="color-profile1556" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1409"
+       id="linearGradient1411"
+       x1="64"
+       y1="0"
+       x2="64"
+       y2="128"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:url(#linearGradient1411);stroke-width:0.863622;paint-order:stroke markers fill;fill-opacity:1"
+       id="rect240"
+       width="128"
+       height="128"
+       x="0"
+       y="0" />
+    <g
+       id="g1430"
+       transform="translate(0,-7.9198473)"
+       style="opacity:1;fill:#ffffff;fill-opacity:1">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:56.6377px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.863622;paint-order:stroke markers fill;fill-opacity:1"
+         x="21.578251"
+         y="79.745277"
+         id="text958"><tspan
+           sodipodi:role="line"
+           id="tspan956"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:56.6377px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.863622;fill-opacity:1"
+           x="21.578251"
+           y="79.745277">{    }</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.9085px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.288321;paint-order:stroke markers fill;fill-opacity:1"
+         x="41.631245"
+         y="70.154716"
+         id="text1068"><tspan
+           sodipodi:role="line"
+           id="tspan1066"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.9085px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.288321;fill:#ffffff;fill-opacity:1"
+           x="41.631245"
+           y="70.154716">JSON</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.412px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.174012;paint-order:stroke markers fill;fill-opacity:1"
+         x="22.711395"
+         y="104.07979"
+         id="text1064"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.412px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.174012;fill:#ffffff;fill-opacity:1"
+           x="22.711395"
+           y="104.07979"
+           id="tspan1070">PLACEHOLDER</tspan></text>
+    </g>
+  </g>
+</svg>
