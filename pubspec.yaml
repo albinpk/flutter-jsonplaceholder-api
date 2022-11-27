@@ -1,5 +1,5 @@
 name: jsonplaceholder_example
-description: A new Flutter project.
+description: A simple Flutter app using jsonplaceholder.typicode.com's API
 
 publish_to: "none"
 
