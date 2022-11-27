@@ -13,7 +13,11 @@ class AlbumsView extends StatefulWidget {
 
 class _AlbumsViewState extends State<AlbumsView>
     with AutomaticKeepAliveClientMixin<AlbumsView> {
-  final _albumsFuture = AlbumRepository().getAllAlbums();
+  /// Albums future getter.
+  /// Used for pull to refresh.
+  Future<List<Album>> get _newFuture => AlbumRepository().getAllAlbums();
+
+  late Future<List<Album>> _albumsFuture = _newFuture;
 
   @override
   Widget build(BuildContext context) {
@@ -37,14 +41,23 @@ class _AlbumsViewState extends State<AlbumsView>
           return const Center(child: Text('No Albums found!'));
         }
 
-        return ListView.builder(
-          itemCount: albums.length,
-          itemBuilder: (context, index) {
-            return AlbumTile(album: albums[index]);
-          },
+        return RefreshIndicator(
+          onRefresh: _onRefresh,
+          child: ListView.builder(
+            itemCount: albums.length,
+            itemBuilder: (context, index) {
+              return AlbumTile(album: albums[index]);
+            },
+          ),
         );
       },
     );
+  }
+
+  Future<void> _onRefresh() async {
+    setState(() {
+      _albumsFuture = _newFuture;
+    });
   }
 
   @override

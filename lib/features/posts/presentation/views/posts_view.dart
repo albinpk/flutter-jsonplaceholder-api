@@ -13,7 +13,11 @@ class PostsView extends StatefulWidget {
 
 class _PostsViewState extends State<PostsView>
     with AutomaticKeepAliveClientMixin<PostsView> {
-  final Future<List<Post>> _postsFuture = PostRepository().getAllPosts();
+  /// Posts future getter.
+  /// Used for pull to refresh.
+  Future<List<Post>> get _newFuture => PostRepository().getAllPosts();
+
+  late Future<List<Post>> _postsFuture = _newFuture;
 
   @override
   Widget build(BuildContext context) {
@@ -37,14 +41,23 @@ class _PostsViewState extends State<PostsView>
           return const Center(child: Text('No Posts found!'));
         }
 
-        return ListView.builder(
-          itemCount: posts.length,
-          itemBuilder: (context, index) {
-            return PostTile(post: posts[index]);
-          },
+        return RefreshIndicator(
+          onRefresh: _onRefresh,
+          child: ListView.builder(
+            itemCount: posts.length,
+            itemBuilder: (context, index) {
+              return PostTile(post: posts[index]);
+            },
+          ),
         );
       },
     );
+  }
+
+  Future<void> _onRefresh() async {
+    setState(() {
+      _postsFuture = _newFuture;
+    });
   }
 
   @override

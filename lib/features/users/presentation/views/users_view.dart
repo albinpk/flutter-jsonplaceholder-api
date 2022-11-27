@@ -13,7 +13,11 @@ class UsersView extends StatefulWidget {
 
 class _UsersViewState extends State<UsersView>
     with AutomaticKeepAliveClientMixin<UsersView> {
-  final Future<List<User>> _usersFuture = UserRepository().getAllUsers();
+  /// Users future getter.
+  /// Used for pull to refresh.
+  Future<List<User>> get _newFuture => UserRepository().getAllUsers();
+
+  late Future<List<User>> _usersFuture = _newFuture;
 
   @override
   Widget build(BuildContext context) {
@@ -37,14 +41,23 @@ class _UsersViewState extends State<UsersView>
           return const Center(child: Text('No Users found!'));
         }
 
-        return ListView.builder(
-          itemCount: users.length,
-          itemBuilder: (context, index) {
-            return UserTile(user: users[index]);
-          },
+        return RefreshIndicator(
+          onRefresh: _onRefresh,
+          child: ListView.builder(
+            itemCount: users.length,
+            itemBuilder: (context, index) {
+              return UserTile(user: users[index]);
+            },
+          ),
         );
       },
     );
+  }
+
+  Future<void> _onRefresh() async {
+    setState(() {
+      _usersFuture = _newFuture;
+    });
   }
 
   @override
