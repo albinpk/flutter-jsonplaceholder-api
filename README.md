@@ -1,16 +1,29 @@
-# jsonplaceholder_example
+<h1 align="center">
+<img src="./assets/icons/icon.png" height="200px" alt="Jsonplaceholder api app icon"/>
+<br>
+JsonPlaceholder API example
+</h1>
 
-A new Flutter project.
+Simple Flutter app using the [jsonplaceholder.typicode.com][apiurl] API (work in progress).
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- List of users
+- List of posts
+- List of albums
+- User profile with posts and albums
+- List of comments on a post.
+- List of photos in an album
 
-A few resources to get you started if this is your first Flutter project:
+## Supported Platforms
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Mobile
+- Desktop
+- Web
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Packages & APIs
+
+- [http](https://pub.dev/packages/http)
+- [jsonplaceholder][apiurl]
+
+[apiurl]: https://jsonplaceholder.typicode.com
