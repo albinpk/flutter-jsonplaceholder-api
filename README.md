@@ -19,7 +19,7 @@ Simple Flutter app using the [jsonplaceholder.typicode.com][apiurl] API (work in
 
 - Mobile
 - Desktop
-- Web
+- [Web][livedemourl]
 
 ## Packages & APIs
 
@@ -27,3 +27,4 @@ Simple Flutter app using the [jsonplaceholder.typicode.com][apiurl] API (work in
 - [jsonplaceholder][apiurl]
 
 [apiurl]: https://jsonplaceholder.typicode.com
+[livedemourl]: https://albinpk.github.io/flutter-jsonplaceholder-api
